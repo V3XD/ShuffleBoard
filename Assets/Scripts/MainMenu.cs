@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
@@ -73,7 +74,7 @@ public class MainMenu : MonoBehaviour
                     ReadParameters(parameters.condition.ToString());
                     parameters.SetPath();
                     File.AppendAllText(parameters.outpath, parameters.outputHeader + Environment.NewLine);
-                    Application.LoadLevel("Game");
+                    SceneManager.LoadScene("Game");
                 }
             }
         }

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PuckBarrier : MonoBehaviour
 {
@@ -58,11 +59,11 @@ public class PuckBarrier : MonoBehaviour
                 parameters.trialNumber++;
                 if (parameters.trialNumber < parameters.totalTrials)
                 {
-                    Application.LoadLevel(Application.loadedLevel);
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 }
                 else
                 {
-                    Application.LoadLevel("MainMenu");
+                    SceneManager.LoadScene("MainMenu");
                 }
             }
         }

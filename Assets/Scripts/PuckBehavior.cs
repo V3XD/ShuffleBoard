@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PuckBehavior : MonoBehaviour
 {
@@ -86,7 +87,7 @@ public class PuckBehavior : MonoBehaviour
             RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
             if (hit.collider != null)
             {
-                Application.LoadLevel(Application.loadedLevel);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
 
