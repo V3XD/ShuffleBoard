@@ -11,6 +11,11 @@ Set the parameters for the experiment for each participant in the Log folder. Th
 2. Button press.
 3. Flick.
 
+### Output
+Came first
+- Audio: -1
+- Visual: 1
+
 ## Known issues
 The Unity3D app freezes unless there is mouse movement and the cursor needs to be visible.
 We recommend using the [Mouse Jiggler](https://mousejiggler.codeplex.com/).

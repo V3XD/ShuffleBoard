@@ -63,7 +63,8 @@ public class PuckBehavior : MonoBehaviour
                         float time = hit.distance / velocity.magnitude;
                         if (time <= Mathf.Abs(parameters.GetDelay()))
                         {
-                            PuckBarrier.GetComponent<AudioSource>().Play();
+                            float delay = Mathf.Abs(parameters.GetDelay()) - time;
+                            PuckBarrier.GetComponent<AudioSource>().PlayDelayed(delay);
                             PuckBarrier.layer = 2; // Ignore Raycast
                         }
                     }
