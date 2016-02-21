@@ -8,9 +8,17 @@ public class Auto : PuckBehavior
 
     protected override void OnStart()
     {
-        ready = GameObject.Find("Ready");
-        readyRenderer = ready.GetComponent<Renderer>();
-        puckBarrier.EnableButton(ready);
+        if(parameters.trialNumber == 0)
+        {
+            ready = GameObject.Find("Ready");
+            readyRenderer = ready.GetComponent<Renderer>();
+            puckBarrier.EnableButton(ready);
+        }
+        else
+        {
+            StartCoroutine(Shoot());
+        }
+
         gameObject.layer = 2; // Ignore Raycast
     }
 
